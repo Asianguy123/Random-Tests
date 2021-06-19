@@ -4,7 +4,8 @@
 - sort edges in ascending weight order #DONE
 - pick lowest weight edge #DONE
 - pick next edge - add if it doesnt create a cycle 
-- print MST and weight'''
+- print MST and weight
+'''
 
 # network contruction: [[weight, 'node', 'node']]
 
@@ -86,16 +87,16 @@ def kruskal(vertices,edges):
     '''
     for vertice in vertices:
         make_set(vertice)
-    minu_tree = []
+    tree = []
     mst_weight = 0
     edges.sort()  # Sort by weight from smallest to largest
     for edge in edges:
         weight, vertice1, vertice2 = edge
         if find(vertice1) != find(vertice2):
             merge(vertice1, vertice2)
-            minu_tree.append(edge)
+            tree.append(edge)
             mst_weight += weight
-    return minu_tree, mst_weight
+    return tree, mst_weight
 
 tests = [test_one(), test_two(), test_three()]
 for edges in tests:
