@@ -5,7 +5,7 @@ pygame.init()
 clock = pygame.time.Clock()
 SCREEN_WIDTH, SCREEN_HEIGHT = 1000, 600
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption('firework particle effect things')
+pygame.display.set_caption('firework particle effect thing')
 
 # location, velocity, timer
 particles = []
