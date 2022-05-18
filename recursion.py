@@ -7,6 +7,10 @@
 # Factorial Calculator
 
 def factorial_calc(num):
+    '''
+    Calculates factorials using iteration
+    '''
+    
     out = 1
     if num != 0:
         for i in range(2, num + 1):
