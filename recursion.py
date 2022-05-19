@@ -18,6 +18,10 @@ def factorial_calc(num):
     return num
 
 def recursive_factorial_calc(x):
+    '''
+    Calculates fcatorials using recursion - faster, but can result in a stack overflow
+    '''
+
     if x == 1 or x == 0:
         return 1
     else:
