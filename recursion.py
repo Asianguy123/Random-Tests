@@ -26,3 +26,7 @@ def recursive_factorial_calc(x):
         return 1
     else:
         return x * recursive_factorial_calc(x - 1)
+
+def run_factorial_calc():
+    num = int(input('Enter the integer you would like to find the factorial of:  '))
+    print(recursive_factorial_calc(num))    
