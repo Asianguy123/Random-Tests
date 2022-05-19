@@ -16,3 +16,9 @@ def factorial_calc(num):
         for i in range(2, num + 1):
             out *= i
     return num
+
+def recursive_factorial_calc(x):
+    if x == 1 or x == 0:
+        return 1
+    else:
+        return x * recursive_factorial_calc(x - 1)
