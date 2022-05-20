@@ -12,7 +12,8 @@ import pygame
 # Main Function
 
 def main():
-  pass
+  while True:
+    
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Constants
@@ -23,6 +24,7 @@ SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 1000 
 SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Application Name | Asianguy_123')
+bg_colour = pygame.Color('#FFFFFF')
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Runs Code
