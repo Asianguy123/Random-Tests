@@ -12,7 +12,13 @@ import pygame
 # Main Function
 
 def main():
-  while True:
+    while True:
+        
+        
+        # window update
+        pygame.display.flip()
+        clock.tick(60)
+        SCREEN.fill(bg_colour)
     
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
