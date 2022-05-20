@@ -14,7 +14,10 @@ import pygame
 def main():
     click = False
     while True:
-        mx, my = pygame.mouse.get_pos()     
+        
+        mx, my = pygame.mouse.get_pos() 
+       
+        # event loop
         click = False
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -27,7 +30,7 @@ def main():
         SCREEN.fill(bg_colour)
     
 
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------
 # Constants
 
 pygame.init()
