@@ -12,8 +12,14 @@ import pygame
 # Main Function
 
 def main():
+    click = False
     while True:
-        
+        mx, my = pygame.mouse.get_pos()     
+        click = False
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
         
         # window update
         pygame.display.flip()
