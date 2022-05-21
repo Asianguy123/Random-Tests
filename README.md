@@ -14,3 +14,6 @@ Random code and algorithms that is cool/useful that i want to always have access
   - finds shortest path from source to another vertex
 - **Pygame Template**
   - skeleton for pygame file
+- **Recursion Test**
+  - Factorial calculator
+  - Tower of Hanoi
