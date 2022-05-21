@@ -30,7 +30,7 @@ def main():
                     
         # window update
         pygame.display.flip()
-        clock.tick(60)
+        CLOCK.tick(60)
         SCREEN.fill(bg_colour)
     
 
