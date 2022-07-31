@@ -1,5 +1,5 @@
 # Random-Tests
-Random code and algorithms that is cool/useful that i want to always have access to
+Random code and algorithms that is cool/useful that I want to always have access to
 
 ## Python
 - **FizzBuzz**
