@@ -35,13 +35,24 @@ def run_factorial_calc():
     num = int(input('Enter the integer you would like to find the factorial of:  '))
     print(recursive_factorial_calc(num))
 
+# ---------------------------------------------------------------------------------------------------------------------
+# Tower of Hanoi, disc moving problem
+
 def TOH(n, source, intermediate, destination):
+    '''
+    Takes number of discs and node labels
+
+    - returns when n = 1
+    - calls itself and switches intermediate and destination nodes, creates a recursive loop
+    - calls itself again but makes swaps source and intermediate nodes, creates a 2nd recursive loop
+    '''
+
     if n == 1:
         print(f'Move disc 1 from {source} to {destination}')
         return
     TOH(n - 1, source, destination, intermediate)
     print(f'Move disc {n} from {source} to {destination}')
-    TOH(n - 1, intermediate, source, destination)    
+    TOH(n - 1, intermediate, source, destination)  
 
 def run_TOH():
     '''
