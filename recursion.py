@@ -34,3 +34,11 @@ def run_factorial_calc():
 
     num = int(input('Enter the integer you would like to find the factorial of:  '))
     print(recursive_factorial_calc(num))
+
+def TOH(n, source, intermediate, destination):
+    if n == 1:
+        print(f'Move disc 1 from {source} to {destination}')
+        return
+    TOH(n - 1, source, destination, intermediate)
+    print(f'Move disc {n} from {source} to {destination}')
+    TOH(n - 1, intermediate, source, destination)    
