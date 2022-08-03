@@ -42,3 +42,10 @@ def TOH(n, source, intermediate, destination):
     TOH(n - 1, source, destination, intermediate)
     print(f'Move disc {n} from {source} to {destination}')
     TOH(n - 1, intermediate, source, destination)    
+
+def run_TOH():
+    discs = int(input('Enter the integer number of discs you want in your tower:  '))
+    TOH(discs, 'A', 'B', 'C')
+
+if __name__ == '__main__':
+    run_TOH()    
