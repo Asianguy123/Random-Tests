@@ -44,8 +44,12 @@ def TOH(n, source, intermediate, destination):
     TOH(n - 1, intermediate, source, destination)    
 
 def run_TOH():
+    '''
+    Input and calls TOH function
+    '''
+
     discs = int(input('Enter the integer number of discs you want in your tower:  '))
     TOH(discs, 'A', 'B', 'C')
 
 if __name__ == '__main__':
-    run_TOH()    
+    run_TOH()  
