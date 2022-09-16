@@ -71,3 +71,42 @@ def test_three():
             [7, 7, 8]
     ]
     return vertices, edges
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Graph Class
+
+class Graph():
+
+    '''
+    GRAPH CLASS:
+
+    - create a graph of N vertices
+    - add x edges
+    - Union Find algorithm, to check for and avoid cycles
+    - returns a list of edges that form the MST + its weight
+    '''
+
+    def __init__(self, vertices):
+        self.vertices = vertices
+        self.graph = []
+
+    def add_edge(self, edge):
+        self.graph.append(edge)
+
+    # Union Find algorithm
+
+    def find(self, parent_set, i):
+        if parent_set[i] == i:
+            return i
+        return self.find(parent_set, parent_set[i])
+
+    def union(self, parent_set, ranks, node_one, node_two):
+        n1_root = self.find(parent_set, node_one)
+        n2_root = self.find(parent_set, node_two)
+        if ranks[n1_root] < ranks[n2_root]:
+            parent_set[n1_root] = n2_root
+        elif ranks[n1_root] > ranks[n2_root]:
+            parent_set[n2_root] = n1_root
+        else:
+            parent_set[n2_root] = n1_root
+            ranks[n1_root] += 1
