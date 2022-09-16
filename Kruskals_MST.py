@@ -133,3 +133,37 @@ class Graph():
                 mst.append(edge)
                 self.union(parent_set, ranks, node_one, node_two)
         return mst
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Main Function
+
+def run_kruskal():
+    tests = [test_one, test_two, test_three]
+    for test in tests:
+        vertices, edges = test()
+        network = Graph(vertices)
+        for edge in edges:
+            network.add_edge(edge)
+        mst = network.kruskals()
+        mst_weight = 0
+        for edge in mst:
+            mst_weight += edge[0]
+            print(f'{edge[1]} --- {edge[2]}: weight {edge[0]}')
+        print(f'\nMST weight: {mst_weight}\n\n')
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Runs Program
+
+if __name__ == '__main__':
+    run_kruskal()
+
+'''
+Notes:
+
+need a way of cycle checking
+=> union find algorithm 
+    - finds what subset an element is in, then joins 2 subsets into a single subset if they are from the same set
+
+if from same set, can ignore that edge and move onto next lowest weight edge
+'''
