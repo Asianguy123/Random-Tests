@@ -110,3 +110,26 @@ class Graph():
         else:
             parent_set[n2_root] = n1_root
             ranks[n1_root] += 1
+
+    # Kruskal's Algorithm
+
+    def kruskals(self):
+        mst = []
+        i = 0
+        j = 0
+        self.graph = sorted(self.graph, key=lambda edge:edge[0])
+        parent_set = []
+        ranks = []
+        for vertex in range(self.vertices):
+            parent_set.append(vertex)
+            ranks.append(0)
+        while j < (self.vertices - 1):
+            edge = self.graph[i]
+            i += 1
+            node_one = self.find(parent_set, edge[1])
+            node_two = self.find(parent_set, edge[2])
+            if node_one != node_two:
+                j += 1
+                mst.append(edge)
+                self.union(parent_set, ranks, node_one, node_two)
+        return mst
