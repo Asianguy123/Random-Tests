@@ -7,7 +7,7 @@
 - print MST and weight
 '''
 
-# network contruction format: [[weight, node_one, node_two]] ==> all integers with (0 indexing for nodes)
+# network contruction format: [[weight, node_one, node_two], []...] ==> all integers with (0 indexing for nodes)
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Tests
@@ -15,7 +15,7 @@
 def test_one():
     '''
     expected MST weight = 20
-    connections:    DE, AE, BC, BD
+    connections:    3-4, 0-4, 1-2, 1-3
     '''
 
     vertices = 5
@@ -32,7 +32,7 @@ def test_one():
 def test_two():
     '''
     expected MST weight = 50
-    connections:    DF, BE, CF, BF, AB
+    connections:    3-5, 1-4, 2-5, 1-5, 0-1
     '''
 
     vertices = 6
