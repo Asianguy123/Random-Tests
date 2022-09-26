@@ -71,3 +71,13 @@ def test_three():
             [7, 7, 8]
     ]
     return vertices, edges
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Prim's + Distance Matrix Creation Functions
+
+def make_distance_matrix(edges, vertices):
+    dist_matrix = [[0 for x in range(vertices)] for i in range(vertices)]
+    for edge in edges:
+        dist_matrix[edge[1]][edge[2]] = edge[0]
+        dist_matrix[edge[2]][edge[1]] = edge[0]
+    return dist_matrix
