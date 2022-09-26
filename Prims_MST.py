@@ -98,3 +98,8 @@ def prims(dist_matrix, vertices):
                         if minimum > dist_matrix[i][j]:
                             minimum = dist_matrix[i][j]
                             node_one, node_two = i, j
+        MST_weight += dist_matrix[node_one][node_two]
+        nodes[node_two] = True
+        edge_count += 1
+        print(f'{node_one} --- {node_two}: weight {dist_matrix[node_one][node_two]}')
+    return MST_weight
