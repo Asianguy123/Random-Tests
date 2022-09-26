@@ -103,3 +103,14 @@ def prims(dist_matrix, vertices):
         edge_count += 1
         print(f'{node_one} --- {node_two}: weight {dist_matrix[node_one][node_two]}')
     return MST_weight
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Main Function
+
+def run_prims():
+    tests = [test_one, test_two, test_three]
+    for test in tests:
+        vertices, edges = test()
+        dist_matrix = make_distance_matrix(edges, vertices)
+        MST_weight = prims(dist_matrix, vertices)
+        print(f'\nMST weight: {MST_weight}\n\n')
