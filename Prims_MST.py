@@ -7,7 +7,7 @@ Select an edge of least weight that joins a new vertex to the tree
 - Repeat until all vertices added
 '''
 
-# network contruction format: [[weight, node_one, node_two], []...]
+# network contruction format: [[weight, node_one, node_two], []...] ==> all integers with (0 indexing for nodes)
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Tests
@@ -15,7 +15,7 @@ Select an edge of least weight that joins a new vertex to the tree
 def test_one():
     '''
     expected MST weight = 20
-    connections:    DE, AE, BC, BD
+    connections:    3-4, 0-4, 1-2, 1-3
     '''
 
     vertices = 5
@@ -32,7 +32,7 @@ def test_one():
 def test_two():
     '''
     expected MST weight = 50
-    connections:    DF, BE, CF, BF, AB
+    connections:    3-5, 1-4, 2-5, 1-5, 0-1
     '''
 
     vertices = 6
@@ -114,3 +114,9 @@ def run_prims():
         dist_matrix = make_distance_matrix(edges, vertices)
         MST_weight = prims(dist_matrix, vertices)
         print(f'\nMST weight: {MST_weight}\n\n')
+        
+# ---------------------------------------------------------------------------------------------------------------------
+# Runs Program
+
+if __name__ == '__main__':
+    run_prims()
