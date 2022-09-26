@@ -88,3 +88,13 @@ def prims(dist_matrix, vertices):
     edge_count = 0
     nodes = [0 for x in range(vertices)]
     nodes[0] = True
+    while edge_count < (vertices - 1):
+        minimum = BIG_NUM
+        node_one, node_two = 0, 0
+        for i in range(vertices):
+            if nodes[i]:
+                for j in range(vertices):
+                    if ((not nodes[j]) and dist_matrix[i][j] > 0):
+                        if minimum > dist_matrix[i][j]:
+                            minimum = dist_matrix[i][j]
+                            node_one, node_two = i, j
