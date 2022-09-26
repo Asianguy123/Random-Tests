@@ -81,3 +81,10 @@ def make_distance_matrix(edges, vertices):
         dist_matrix[edge[1]][edge[2]] = edge[0]
         dist_matrix[edge[2]][edge[1]] = edge[0]
     return dist_matrix
+
+def prims(dist_matrix, vertices):
+    MST_weight = 0
+    BIG_NUM = 999999999
+    edge_count = 0
+    nodes = [0 for x in range(vertices)]
+    nodes[0] = True
