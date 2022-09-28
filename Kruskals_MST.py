@@ -105,6 +105,10 @@ class Graph():
         return self.find(parent_set, parent_set[i])
 
     def union(self, parent_set, ranks, node_one, node_two):
+        '''
+        Combines 2 subsets into a single set
+        '''
+
         n1_root = self.find(parent_set, node_one)
         n2_root = self.find(parent_set, node_two)
         if ranks[n1_root] < ranks[n2_root]:
