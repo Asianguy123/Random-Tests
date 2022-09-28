@@ -96,6 +96,10 @@ class Graph():
     # Union Find algorithm
 
     def find(self, parent_set, i):
+        '''
+        Finds if 2 nodes are in the same set
+        '''
+
         if parent_set[i] == i:
             return i
         return self.find(parent_set, parent_set[i])
