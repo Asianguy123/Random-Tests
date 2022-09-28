@@ -122,6 +122,11 @@ class Graph():
     # Kruskal's Algorithm
 
     def kruskals(self):
+        '''
+        Executes Kruskal's Algorithm on the Graph instance
+            - returns an array containing the edges in the MST
+        '''
+
         mst = []
         i = 0
         j = 0
