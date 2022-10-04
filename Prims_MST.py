@@ -76,6 +76,11 @@ def test_three():
 # Prim's + Distance Matrix Creation Functions
 
 def make_distance_matrix(edges, vertices):
+    '''
+    Converts given network into a distance matrix
+        - each index represents the node connection e.g. dist_matrix[0][5] is the connection from node 0 to node 5
+    '''
+
     dist_matrix = [[0 for x in range(vertices)] for i in range(vertices)]
     for edge in edges:
         dist_matrix[edge[1]][edge[2]] = edge[0]
