@@ -88,6 +88,12 @@ def make_distance_matrix(edges, vertices):
     return dist_matrix
 
 def prims(dist_matrix, vertices):
+    '''
+    Implements Prim's MST algorithm
+        - runs until vertices - 1 has been added to graph
+        - works by reducing minimum value until lowest edge found in that loop
+    '''
+
     MST_weight = 0
     BIG_NUM = 999999999
     edge_count = 0
