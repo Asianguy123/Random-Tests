@@ -151,6 +151,10 @@ class Graph():
 # Main Function
 
 def run_kruskal():
+    '''
+    Gets test networks, creates Graph instance and outputs formatted MST
+    '''
+
     tests = [test_one, test_two, test_three]
     for test in tests:
         vertices, edges = test()
