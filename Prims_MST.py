@@ -119,6 +119,10 @@ def prims(dist_matrix, vertices):
 # Main Function
 
 def run_prims():
+    '''
+    Run Prim's MST algorithm on the given tests
+    '''
+
     tests = [test_one, test_two, test_three]
     for test in tests:
         vertices, edges = test()
