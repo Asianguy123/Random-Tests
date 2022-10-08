@@ -14,3 +14,10 @@ def valid_input(sides):
         except ValueError:
             return False
     return True
+
+def triangle_inequality(a, b, c):
+    if (a + b) > c:
+        if (b + c) > a:
+            if (c + a) > b:
+                return True
+    return False
