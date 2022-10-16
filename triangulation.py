@@ -21,3 +21,10 @@ def triangle_inequality(a, b, c):
             if (c + a) > b:
                 return True
     return False
+
+def pythagoras(sides):
+    c = max(sides)
+    sides.remove(c)
+    if int(c)^2 == int(sides[0])^2 + int(sides[1])^2:
+        return True
+    return False
