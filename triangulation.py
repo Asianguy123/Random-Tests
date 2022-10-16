@@ -37,3 +37,12 @@ def triangulation():
         a = input('\n\nEnter a side length:  ')
         b = input('Enter a side length:  ')
         c = input('Enter a side length:  ')
+        sides = [a, b, c]
+        if valid_input(sides):
+            a, b, c = int(sides[0]), int(sides[1]), int(sides[2])
+            if triangle_inequality(a, b, c):
+                pass
+            else:
+                print(outputs[4])
+        else:
+            print(outputs[5])
