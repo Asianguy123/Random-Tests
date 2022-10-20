@@ -53,3 +53,21 @@ def triangulation():
                 print(outputs[4])
         else:
             print(outputs[5])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Outputs
+
+outputs = [
+            '\nEquilateral',
+            '\nIsosceles',
+            '\nRight angled',
+            '\nScalene',
+            '\nNot a triangle',
+            '\nInvalid input',
+        ]
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Runs Program
+
+if __name__ == '__main__':
+    triangulation()
