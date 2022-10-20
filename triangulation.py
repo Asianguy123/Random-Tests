@@ -6,6 +6,10 @@
 # Check Functions
 
 def valid_input(sides):
+    '''
+    Checks if input for side lengths are valid
+    '''
+
     for side in sides:
         try:
             val = int(side)
@@ -16,6 +20,10 @@ def valid_input(sides):
     return True
 
 def triangle_inequality(a, b, c):
+    '''
+    Performs the triangle inequality to check if the inputted sides can form a triangle
+    '''
+
     if (a + b) > c:
         if (b + c) > a:
             if (c + a) > b:
@@ -23,12 +31,15 @@ def triangle_inequality(a, b, c):
     return False
 
 def pythagoras(sides):
+    '''
+    Tests if a set of sides fulfils the Pythagorean Theorem
+    '''
+
     c = max(sides)
     sides.remove(c)
     if int(c)^2 == int(sides[0])^2 + int(sides[1])^2:
         return True
     return False
-
 # ---------------------------------------------------------------------------------------------------------------------
 # Main Function
 
