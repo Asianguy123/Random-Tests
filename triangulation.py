@@ -40,10 +40,15 @@ def pythagoras(sides):
     if int(c)^2 == int(sides[0])^2 + int(sides[1])^2:
         return True
     return False
+
 # ---------------------------------------------------------------------------------------------------------------------
 # Main Function
 
 def triangulation():
+    '''
+    Main function, calls other check functions and manages input/output
+    '''
+
     while True:
         a = input('\n\nEnter a side length:  ')
         b = input('Enter a side length:  ')
