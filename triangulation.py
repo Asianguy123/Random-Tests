@@ -41,7 +41,14 @@ def triangulation():
         if valid_input(sides):
             a, b, c = int(sides[0]), int(sides[1]), int(sides[2])
             if triangle_inequality(a, b, c):
-                pass
+                if a == b == c:
+                    print(outputs[0])
+                elif a == b or a == c or b == c:
+                    print(outputs[1])
+                elif pythagoras(sides):
+                    print(outputs[2])
+                else:
+                    print(outputs[3])
             else:
                 print(outputs[4])
         else:
