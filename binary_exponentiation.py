@@ -16,3 +16,18 @@ Example of 3^139:
 
 Has applications within modular exponentiation, calculating fibonacci numbers and applying repeated linear transformations 
 '''
+
+import numpy
+
+def bin_exp(a, n):
+    '''
+    Basic binary exponentiation
+    '''
+
+    r = 1
+    while n:
+        if n % 2 == 1:
+            r *= a
+        a *= a
+        n = n // 2
+    return r
