@@ -47,3 +47,31 @@ def mod_exp(a, n, m):
         a = (a ** 2) % m
         n = n // 2
     return r
+
+def nth_fib(n):
+    '''
+    Calculating the nth Fibonacci number
+
+    Fibonacci numbers can be calculated using a matrix exponential of the 2x2 matrix (1, 1, 1, 0)^n @ (F1, F2) which is (0, 1)
+    Binary exponentiation can be applied to the (1, 1, 1, 0)^n term
+    '''
+
+    A = numpy.array([[1, 1], [1, 0]], dtype=object)
+    R = numpy.eye(A.shape[0], dtype=object) # identity matrix
+    while n:
+        if n % 2 == 1:
+            R = R @ A
+        A = A @ A
+        n = n // 2
+    return R[1, 0]
+
+def digits(num):
+    return int(log10(num) // 1)
+
+
+if __name__ == '__main__':
+    print(bin_exp(37, 1735663))
+    print(mod_exp(506144622821207, 36206627334623635837127, 37886293))
+    fibonacci_num = nth_fib(10000000)
+    print(fibonacci_num)
+    print(f'digits: {digits(fibonacci_num)}')
