@@ -15,3 +15,12 @@ class Graph:
         print(f'Shortest path from {source} to {destination}:')
         print(f'    - path: {self.path}')
         print(f'    - weight: {visited[destination][0]}')       
+
+    def dijkstras_shortest_path(self, source, destination):
+        # initialisation
+        self.unvisited = {}
+        self.visited = {}
+        INF = 99999999
+        for node in self.graph:
+            self.unvisited[node] = [INF, None] 
+        self.unvisited[source][0] = 0 # set source weight to 0
