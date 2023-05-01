@@ -57,11 +57,17 @@ class Graph:
             del self.unvisited[current_node]
         self.get_path(self.visited, source, destination)      
 
-graph = {"A": {"B":8, "C":5},
-             "C": {"A":5, "D":6, "E":9},
-             "B": {"A":8, "D":1},
-             "D": {"C":6, "B":1, "E":2},
-             "E": {"C":9, "D":2}
-             }
-g = Graph(graph)
-g.dijkstras_shortest_path('A', 'C')
+# ---------------------------------------------------------------------------------------------------------------------
+# Run Program
+
+graph = {
+        "A": {"B":8, "C":5},
+        "C": {"A":5, "D":6, "E":9},
+        "B": {"A":8, "D":1},
+        "D": {"C":6, "B":1, "E":2},
+        "E": {"C":9, "D":2}
+        }
+
+if __name__ == '__main__':
+    g = Graph(graph)
+    g.dijkstras_shortest_path('A', 'C')
