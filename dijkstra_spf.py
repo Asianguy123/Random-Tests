@@ -53,3 +53,15 @@ class Graph:
                     if weight < self.unvisited[node][0]:
                         self.unvisited[node][0] = weight
                         self.unvisited[node][1] = current_node
+            self.visited[current_node] = self.unvisited[current_node] # current node declared as visited
+            del self.unvisited[current_node]
+        self.get_path(self.visited, source, destination)      
+
+graph = {"A": {"B":8, "C":5},
+             "C": {"A":5, "D":6, "E":9},
+             "B": {"A":8, "D":1},
+             "D": {"C":6, "B":1, "E":2},
+             "E": {"C":9, "D":2}
+             }
+g = Graph(graph)
+g.dijkstras_shortest_path('A', 'C')
