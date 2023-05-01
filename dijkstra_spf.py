@@ -1,6 +1,14 @@
 # Dijkstra's Shortest Pathfinding Algorithm
 
 class Graph:
+
+    '''
+    GRAPH CLASS:
+
+    - create a graph using a dictionary
+    - display shortest path found with Dijkstra's
+    - implementation of Dijkstra's
+    '''
      
     def __init__(self, graph):
         self.graph = graph
