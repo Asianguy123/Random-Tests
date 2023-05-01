@@ -45,3 +45,11 @@ class Graph:
         while len(self.unvisited) > 0:
             current_node = min(self.unvisited, key = self.unvisited.get) # lowest weight node
             neighbours = self.graph[current_node]
+
+            # compares neighbour routes to decide on next node to visit
+            for node in neighbours:
+                if node not in self.visited:
+                    weight = self.unvisited[current_node][0] + neighbours[node]
+                    if weight < self.unvisited[node][0]:
+                        self.unvisited[node][0] = weight
+                        self.unvisited[node][1] = current_node
