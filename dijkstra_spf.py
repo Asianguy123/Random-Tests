@@ -26,9 +26,13 @@ class Graph:
             self.current_node = visited[self.current_node][1]
         print(f'Shortest path from {source} to {destination}:')
         print(f'    - path: {self.path}')
-        print(f'    - weight: {visited[destination][0]}')    
+        print(f'    - weight: {visited[destination][0]}')       
 
     def dijkstras_shortest_path(self, source, destination):
+        '''
+        Implementation of Dijkstra's algorithm on the Graph instance
+        '''
+
         # initialisation
         self.unvisited = {}
         self.visited = {}
