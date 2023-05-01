@@ -24,3 +24,8 @@ class Graph:
         for node in self.graph:
             self.unvisited[node] = [INF, None] 
         self.unvisited[source][0] = 0 # set source weight to 0
+    
+        # loop until all nodes visited
+        while len(self.unvisited) > 0:
+            current_node = min(self.unvisited, key = self.unvisited.get) # lowest weight node
+            neighbours = self.graph[current_node]
