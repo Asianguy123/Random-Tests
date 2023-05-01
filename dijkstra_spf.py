@@ -13,7 +13,11 @@ class Graph:
     def __init__(self, graph):
         self.graph = graph
 
-    def display_shortest_path(self, visited, source, destination):
+    def get_path(self, visited, source, destination):
+        '''
+        Back tracks from destination node, using previous node data until source node is reached
+        '''
+
         self.current_node = destination
         self.path = destination
         while self.current_node != source:
@@ -22,7 +26,7 @@ class Graph:
             self.current_node = visited[self.current_node][1]
         print(f'Shortest path from {source} to {destination}:')
         print(f'    - path: {self.path}')
-        print(f'    - weight: {visited[destination][0]}')       
+        print(f'    - weight: {visited[destination][0]}')    
 
     def dijkstras_shortest_path(self, source, destination):
         # initialisation
