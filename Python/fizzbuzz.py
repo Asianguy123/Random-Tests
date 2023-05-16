@@ -1,4 +1,5 @@
 # FizzBuzz
+
 stop = 100
 for i in range(1, stop + 1):
     fb_nums = [3, 5, 7, 8, 12, 4]
@@ -9,4 +10,4 @@ for i in range(1, stop + 1):
             output += fb_outs[j]
     if len(output) == 0:
         output += str(i)
-    #print(output)
+    # print(output)
