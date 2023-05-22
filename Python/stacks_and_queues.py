@@ -56,9 +56,8 @@ def test6(data_struct, max_length):
             else:
                 stack_push(i)
         
-
 # ---------------------------------------------------------------------------------------------------------------------
-# Functions
+# Queue Functions
 
 def enqueue(data_struct, val, max_length):
     if (get_length(queue) + 1) < max_length:
@@ -69,6 +68,9 @@ def enqueue(data_struct, val, max_length):
 def dequeue(data_struct):
     val = data_struct.pop(0)
     return val
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Stack Functions
 
 def stack_pop(data_struct):
     val = data_struct.pop(-1)
@@ -85,6 +87,9 @@ def stack_peek(data_struct, length):
     val = data_struct[0]
     print(val)
 
+# ---------------------------------------------------------------------------------------------------------------------
+# General Functions
+
 def check_empty(data_struct):
     if data_struct:
         return True
@@ -96,6 +101,8 @@ def get_length(data_struct):
 def main():
     stack_max_length = 9
     queue_max_length = 10
+
+    # call tests here as required
     
     
 queue = []
