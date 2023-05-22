@@ -1,3 +1,7 @@
+# Particle Effect in Pygame
+
+# could be used for trail graphics within a game or firework like animations
+
 import pygame, sys, random, time
 
 # setup
