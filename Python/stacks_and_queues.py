@@ -56,7 +56,6 @@ def test6(data_struct, max_length):
             else:
                 stack_push(i)
         
-            
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Functions
@@ -104,56 +103,3 @@ stack = []
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-'''
-if queue is non-circular:
-    if queue not full:
-        add item to end of queue
-        update rear pointer to new end memory index/address
-    if queue is full:
-        return queue overflow error
-if queue is circular:
-    if queue not full:
-        add item before queue
-        update rear pointer to new memory index/address
-    if queue is full:
-        return queue overflow error
-
-procedure.add()
-    maxElements = 10
-    question = input('Enter a new question)
-    valid = True
-    for q in questions_array
-        if q equals question then
-            print('Question has already been entered)
-            valid = False
-        else then
-            next
-        endif
-    if valid then
-        if (tail + 1) >= maxElements then
-            print('Queues is full')
-        else then
-            queue.append(question)
-            questions_array.append(question)
-            tail = tail + 1
-        endif
-    endif
-endprocedure
-
-
-procedure.remove()
-    ask_question = queue[head]
-    print(ask_question)
-    queue.pop(head)
-endprocedure
-'''
