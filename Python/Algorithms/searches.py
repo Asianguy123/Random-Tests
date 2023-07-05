@@ -21,7 +21,8 @@ def binary_search(array, element):
     '''
     Binary search:
     - performed only on sorted data (this function accepts unsorted too)
-    - 
+    - uses a flag (for demonstrative purposes)
+    - time = O(logn)
     '''
 
     array = sorted(array)
@@ -40,5 +41,3 @@ def binary_search(array, element):
         elif array[i] > element:
             array = array[:i] 
     return index
-
-print(binary_search([1, 2, 6, 3, 4, 10, 9, 5, 3, 5, 13], 15))
