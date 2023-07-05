@@ -26,7 +26,6 @@ def bubble_sort(array):
 
         if not swap: # if swap = False after a pass then sort is done
             return array
-
         
 # ---------------------------------------------------------------------------------------------------------------------
 # Insertion Sort
@@ -135,5 +134,3 @@ def quick_sort(array):
         return array
     
     return recursive_qs(array, 0, len(array) - 1)
-
-print(quick_sort([3, 5, 1, 4, 2]))
