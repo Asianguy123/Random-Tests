@@ -66,7 +66,7 @@ def nth_fib(n):
     return R[1, 0]
 
 def digits(num):
-    return int(log10(num) // 1)
+    return int(log10(num))
 
 
 if __name__ == '__main__':
