@@ -13,3 +13,7 @@ Random code and algorithms that is cool/useful that I want to always have access
 - **Search Algorithms:** Linear and Binary searches
 - **Scheduler:** OS scheduling algorithms - SJF, FCFS, RR
 - **Triangulation:** determines what kind of triangle is created, given side lengths
+
+## Rust
+- **FizzBuzz:** expandable code version
+- **Compressor:** compression via flake2 crate
