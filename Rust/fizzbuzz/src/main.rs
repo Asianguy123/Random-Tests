@@ -1,3 +1,5 @@
+// FizzBuzz expandable code
+
 fn main() {
     for i in 1..101 {
         let mut output: String = String::new();
