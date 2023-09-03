@@ -23,3 +23,11 @@ class SegmentParent():
     - pivots around a fixed point
     - calculations of segment end points done via polar-cartesian conversion
     '''
+    
+    def __init__(self, x, y, length, angle, width, colour):
+        self.a = (x, y)
+        self.r = length
+        self.theta = angle
+        self.width = width
+        self.colour = colour
+        self.offset = 0
