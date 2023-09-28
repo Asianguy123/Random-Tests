@@ -31,3 +31,11 @@ class SegmentParent():
         self.width = width
         self.colour = colour
         self.offset = 0
+
+    def calculate_b(self):
+        '''
+        Calculates point b by converting from polar to cartesian coordinates
+        '''
+
+        b = (self.a[0] + self.r * math.cos(self.theta), self.a[1] - self.r * math.sin(self.theta)) # x = r * cos(theta), y = r * sin(theta)
+        return b
