@@ -46,3 +46,10 @@ class SegmentParent():
         '''
 
         pygame.draw.line(SCREEN, self.colour, self.a, self.b, self.width)
+
+    def wiggle(self, i, t):
+        '''
+        Sinsuoidal wiggle function - varies offset with time, dependent on position in hierarchy
+        '''
+
+        self.offset =  i * (math.sin(t * 0.5 * i) / (i + 1))
