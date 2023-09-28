@@ -53,3 +53,12 @@ class SegmentParent():
         '''
 
         self.offset =  i * (math.sin(t * 0.5 * i) / (i + 1))
+
+    def update(self, i, t):
+        '''
+        Updates the segment by applying wiggle, recalculating point b and incrementing the theta value
+        '''
+
+        self.wiggle(i, t)
+        self.b = self.calculate_b()
+        self.theta += self.offset
