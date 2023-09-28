@@ -39,3 +39,10 @@ class SegmentParent():
 
         b = (self.a[0] + self.r * math.cos(self.theta), self.a[1] - self.r * math.sin(self.theta)) # x = r * cos(theta), y = r * sin(theta)
         return b
+
+    def draw_segment(self):
+        '''
+        Draws segment to screen with assigned attributes
+        '''
+
+        pygame.draw.line(SCREEN, self.colour, self.a, self.b, self.width)
