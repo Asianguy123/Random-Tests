@@ -72,3 +72,12 @@ class SegmentChild(SegmentParent):
     - used for all segments not attached to a fixed point
     - 
     '''
+
+    def __init__(self, parent, length, angle, width, colour):
+        self.a = parent.calculate_b()
+        self.r = length
+        self.theta = 0
+        self.offset = angle
+        self.width = width
+        self.parent = parent
+        self.colour = colour
