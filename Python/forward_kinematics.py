@@ -62,3 +62,13 @@ class SegmentParent():
         self.wiggle(i, t)
         self.b = self.calculate_b()
         self.theta += self.offset
+
+class SegmentChild(SegmentParent):
+
+    '''
+    SEGMENT CHILD CLASS:
+
+    - inherits methods from SegmentParent
+    - used for all segments not attached to a fixed point
+    - 
+    '''
