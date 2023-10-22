@@ -81,3 +81,13 @@ class SegmentChild(SegmentParent):
         self.width = width
         self.parent = parent
         self.colour = colour
+    
+    def update(self, i, t):
+        '''
+        See SegmentParent.update() + updates point a to be at parent b
+        '''
+
+        self.wiggle(i, t)
+        self.theta = self.parent.theta + self.offset
+        self.a = self.parent.calculate_b()
+        self.b = self.calculate_b()
